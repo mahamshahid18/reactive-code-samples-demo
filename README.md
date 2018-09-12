@@ -116,6 +116,6 @@ You can see this live in action as well. Please head on over to [the hosted port
 
 ![live code sample gif]()
 
-Have fun. And please let me know if you have any questions regarding this :)
+Have fun. And please let me know if you have any questions regarding this 😄
 
 **Note:** _The example taken is very simple to make it easier to explain and understand. Feel free to generate portals for other APIs which take complex inputs and play around with the inputs to see the code samples change & see the full power of `Reactive Code Samples`_
