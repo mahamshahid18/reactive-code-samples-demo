@@ -98,8 +98,8 @@ If the values inside `data["optionalQueryParams"]` are changed through the code 
 
 ```js
 let queryParameters = {
-	'dialog1': 'May the force be with you',
-	'dialog2': 'Anger leads to hatred, hatred leads to the dark side'
+    'dialog1': 'May the force be with you',
+    'dialog2': 'Anger leads to hatred, hatred leads to the dark side'
 };
 
 const promise = controller.getEmoji(queryParameters);
