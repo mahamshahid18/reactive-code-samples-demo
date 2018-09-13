@@ -1,6 +1,6 @@
-# Getting Started with Star Wars Force Emoji Responses
+# Getting Started with Emoji Responses API
 
-Just a dumb fun little project, a REST API that responds with emoji's based on the request.
+This is just a  fun little project, a REST API that responds with emoji's based on the request.
 If optional query parameters are set, the emoji being sent out might be different (depending on whether certain conditions are met in the input query parameters).
 
 
@@ -18,7 +18,7 @@ To check if node and npm have been successfully installed, write the following c
 
 * `npm --version`
 
-![Version Check](https://apidocs.io/illustration/nodejs?workspaceFolder=StarWarsForceEmojiResponses&step=versionCheck)
+![Version Check](https://apidocs.io/illustration/nodejs?workspaceFolder=EmojiResponsesAPI&step=versionCheck)
 
 Now use npm to resolve all dependencies by running the following command in the root directory (of the SDK folder):
 
@@ -26,7 +26,7 @@ Now use npm to resolve all dependencies by running the following command in the 
 npm install
 ```
 
-![Resolve Dependencies](https://apidocs.io/illustration/nodejs?workspaceFolder=StarWarsForceEmojiResponses&step=resolveDependency1)
+![Resolve Dependencies](https://apidocs.io/illustration/nodejs?workspaceFolder=EmojiResponsesAPI&step=resolveDependency1)
 
 ![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency2)
 
@@ -48,13 +48,13 @@ Click on `File` and select `Open Folder`.
 
 Select the folder of your SDK and click on `Select Folder` to open it up in Sublime Text. The folder will become visible in the bar on the left.
 
-![Open Project](https://apidocs.io/illustration/nodejs?workspaceFolder=StarWarsForceEmojiResponses&step=openProject)
+![Open Project](https://apidocs.io/illustration/nodejs?workspaceFolder=EmojiResponsesAPI&step=openProject)
 
 ### 2. Creating a Test File
 
 Now right click on the folder name and select the `New File` option to create a new test file. Save it as `index.js`.
 
-![Create new file](https://apidocs.io/illustration/nodejs?workspaceFolder=StarWarsForceEmojiResponses&step=createNewFile)
+![Create new file](https://apidocs.io/illustration/nodejs?workspaceFolder=EmojiResponsesAPI&step=createNewFile)
 
 Now import the generated NodeJS library using the following lines of code:
 
@@ -66,7 +66,7 @@ Save changes.
 
 Your `index.js` file should look like this now
 
-![Save new file](https://apidocs.io/illustration/nodejs?workspaceFolder=StarWarsForceEmojiResponses&step=saveNewFile)
+![Save new file](https://apidocs.io/illustration/nodejs?workspaceFolder=EmojiResponsesAPI&step=saveNewFile)
 
 ### 3. Running The Test File
 
@@ -76,7 +76,7 @@ To run the `index.js` file, open up the command prompt and navigate to the Path 
 node index.js
 ```
 
-![Run file](https://apidocs.io/illustration/nodejs?workspaceFolder=StarWarsForceEmojiResponses&step=runProject)
+![Run file](https://apidocs.io/illustration/nodejs?workspaceFolder=EmojiResponsesAPI&step=runProject)
 
 ## How to Test
 
@@ -84,25 +84,25 @@ These tests use Mocha framework for testing, coupled with Chai for assertions. T
 
 ### Method 1 - Run all tests
 
-1. Navigate to the root directory of the SDK folder from command prompt. `(PathToSDK/StarWarsForceEmojiResponses/)`
+1. Navigate to the root directory of the SDK folder from command prompt. `(PathToSDK/EmojiResponsesAPI/)`
 
 2. Type `mocha --recursive` to run all the tests.
 
 ### Method 2 - Run all tests
 
-1. Navigate to the `PathToSDK/StarWarsForceEmojiResponses/test/Controllers/` directory from command prompt.
+1. Navigate to the `PathToSDK/EmojiResponsesAPI/test/Controllers/` directory from command prompt.
 
 2. Type `mocha *` to run all the tests.
 
 ### Method 3 - Run specific controller's tests
 
-1. Navigate to the `PathToSDK/StarWarsForceEmojiResponses/test/Controllers/` directory from command prompt.
+1. Navigate to the `PathToSDK/EmojiResponsesAPI/test/Controllers/` directory from command prompt.
 
-2. Type `mocha StarWarsForceEmojiResponsesController` to run all the tests in that controller file.
+2. Type `mocha EmojiResponsesAPI` to run all the tests in that controller file.
 
 > To increase mocha's default timeout, you can change the `TEST_TIMEOUT` parameter's value in `TestBootstrap.js`.
 
-![Run Tests](https://apidocs.io/illustration/nodejs?controllername=StarWarsForceEmojiResponsesController&workspacefolder=StarWarsForceEmojiResponses&step=runTests)
+![Run Tests](https://apidocs.io/illustration/nodejs?controllername=APIController&workspacefolder=EmojiResponsesAPI&step=runTests)
 
 ## Initializing
 

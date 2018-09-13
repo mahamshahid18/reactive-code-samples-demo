@@ -2,7 +2,7 @@
 
 This repository hosts a demo of the work that I did to implement 'Dynamic/Reactive Code Samples' for JavaScript SDKs, while working as a Software Engineer at [APIMatic](https://apimatic.io). 
 
-Below, I talk about the story behind this specific project, explaining why this project was particularly important. I highly recommend that you read it through, however if you are short on time, please feel free to [skip through and dive into the technical details]() or [see the detailed example]().
+Below, I talk about the story behind this specific project, explaining why this project was particularly important. I highly recommend that you read it through, however if you are short on time, please feel free to [skip through and dive into the technical details](#what-are-reactive-code-samples) or [see the detailed example](#an-example-template-for-code-sample).
 
 ## Why dynamic code samples
 
@@ -33,7 +33,7 @@ So essentially, this means that these code snippets have the ability to dynamica
 
 Keep reading for details on how this behavior was achieved and for an elaborate example which explains the concept better.
 
-## How reactive code samples were achieved
+## How reactive code samples were created
 
 Reactive code samples were built primarily using [Liquid Templating Language](https://shopify.github.io/liquid/). There were 2 main parts in play:
 
@@ -45,34 +45,34 @@ This data (user input) can be changed by anyone looking at the code sample. Howe
 
 ### An example template (for code sample)
 
-I have created a sample API for this demo. You can check out its documentation [over here](). The SDK for consuming this API in Node.js is available in this repository (generated from APIMatic's CodeGen engine). The readme in the SDK project explains how to use the SDK (including code snippets for calling the `/emoji` endpoint) so I won't get into the details for that here. Let's see an example template for rendering a code sample to consume the `/emoji` route of the API:
+I have created a sample API for this demo. You can check out its documentation [over here](https://apimatic.io/apidocs/emojis/v/1_0#/node-js/getting-started). The SDK for consuming this API in Node.js is available in this repository (generated from APIMatic's CodeGen engine). The readme in the SDK project explains how to use the SDK (including code snippets for calling the `/emoji` endpoint) so I won't get into the details for that here. Let's see an example template for rendering a code sample to consume the `/emoji` route of the API:
 
 ```
 {% if data["optionalQueryParams"] != nil %}
-	let queryParameters = {{ '{' }}
-		{% for this in data["optionalQueryParams"] %}
-			'{{ this[0] }}': {% if this[1] != nil %}'{{ this[1] }}' {% else %} '' {% endif %}
-				{% unless forloop.last %}
-					, 
-				{% endunless %}
-		{% endfor %}
-	};
+    let queryParameters = {{ '{' }}
+        {% for this in data["optionalQueryParams"] %}
+            '{{ this[0] }}': {% if this[1] != nil %}'{{ this[1] }}' {% else %} '' {% endif %}
+                {% unless forloop.last %}
+                    , 
+                {% endunless %}
+        {% endfor %}
+    };
 {% endif %}
 
-	const promise = controller.getEmoji(
-		{% if data["optionalQueryParams"] != nil %}
-			queryParameters
-		{% else %}
-			null
-		{% endif %}
-	);
-	promise.then((response) => {
-	    // this block will be executed on successful endpoint call
-	    // `response` will be of type 'string'
-	}, (err) => {
-	    // this block will be executed on endpoint call failure
-	    // `err` is an 'object' containing more information about the error
-	}
+    const promise = controller.getEmoji(
+        {% if data["optionalQueryParams"] != nil %}
+            queryParameters
+        {% else %}
+            null
+        {% endif %}
+    );
+    promise.then((response) => {
+        // this block will be executed on successful endpoint call
+        // `response` will be of type 'string'
+    }, (err) => {
+        // this block will be executed on endpoint call failure
+        // `err` is an 'object' containing more information about the error
+    }
 ```
 
 This template will use the following data from the json file (as input values):
@@ -112,7 +112,7 @@ promise.then((response) => {
 });
 ```
 
-You can see this live in action as well. Please head on over to [the hosted portal]() for this API. You can see the code sample on the right pane and play around with the inputs to the code from the left pane (as pictured below). Additionally, you can also make live calls to the API to see the response.
+You can see this live in action as well. Please head on over to [the hosted portal](https://apimatic.io/apidocs/emojis/v/1_0#/node-js/api-endpoints/api-controller/get-emoji) for this API. You can see the code sample on the right pane and play around with the inputs to the code from the left pane (as pictured below). Additionally, you can also make live calls to the API to see the response.
 
 ![live code sample gif]()
 
