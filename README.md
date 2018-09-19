@@ -47,7 +47,7 @@ This data (user input) can be changed by anyone looking at the code sample. Howe
 
 I have created a sample API for this demo. You can check out its documentation [over here](https://apimatic.io/apidocs/emojis/v/1_0#/node-js/getting-started). The SDK for consuming this API in Node.js is available in this repository (generated from APIMatic's CodeGen engine). The readme in the SDK project explains how to use the SDK (including code snippets for calling the `/emoji` endpoint) so I won't get into the details for that here. Let's see an example template for rendering a code sample to consume the `/emoji` route of the API:
 
-```
+```js
 {% if data["optionalQueryParams"] != nil %}
     let queryParameters = {{ '{' }}
         {% for this in data["optionalQueryParams"] %}
@@ -112,9 +112,9 @@ promise.then((response) => {
 });
 ```
 
-You can see this live in action as well. Please head on over to [the hosted portal](https://apimatic.io/apidocs/emojis/v/1_0#/node-js/api-endpoints/api-controller/get-emoji) for this API. You can see the code sample on the right pane and play around with the inputs to the code from the left pane (as pictured below). Additionally, you can also make live calls to the API to see the response.
+You can see this live in action as well. Please head on over to [the hosted portal](https://apimatic.io/apidocs/emojis/v/1_0#/node-js/api-endpoints/api-controller/get-emoji) for this API. You can see the code sample on the right pane and play around with the inputs to the code from the left pane (as pictured below). Additionally, you can also make live calls to the API to see the response. Please see a quick live demo below:
 
-![live code sample gif]()
+![reactive-code-sample-demo](https://user-images.githubusercontent.com/12479952/45785683-b306b180-bc86-11e8-9e2c-2e8c40d7526a.gif)
 
 Have fun. And please let me know if you have any questions regarding this 😄
 
